@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-700;
+  @apply text-xl;
+}
+
+:focus {
+  outline: 2px dashed;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+em {
+  @apply text-pink-500;
+}
+
+svg {
+  color: currentColor;
+}
+
+.link {
+  display: inline-block;
+  background-image: linear-gradient(#d1fae5, #d1fae5);
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: background 0.35s;
+}
+
+.link:hover {
+  background-size: 100% 100%;
+}
+
+.logo {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: currentColor;
+}
+
+.nav-list li:not(:first-child) {
+  @apply ml-4;
+}
+
+.nav-list li a.active {
+  box-shadow: inset 0 -0.125em 0 0 #fff,
+    inset 0 -0.375em 0 0 rgb(165 243 252 / 80%);
+}
+
+.icons-group > * {
+  @apply mr-4;
+}
+
+.post-title svg {
+  display: inline-block;
+  transition: margin 0.35s;
+}
+
+.post-title:hover svg {
+  @apply ml-2;
+}
+
+/**
+ * Post Styles
+ */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.post {
+  --flow-space: 2.25rem;
+  line-height: 1.5;
+}
+
+.post h1,
+.post h2 {
+  @apply font-black;
+}
+
+.post h1 {
+  @apply text-4xl;
+}
+
+.post h2 {
+  @apply text-3xl;
+}
+
+.post h3 {
+  @apply text-2xl;
+}
+
+.post img {
+  max-width: min(55rem, 100%);
+}
+
+.post figcaption {
+  font-size: var(--size-300);
+
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.post blockquote {
+  padding-left: var(--size-600);
+  border-left: 5px solid;
+  font-style: italic;
+}
+
+.post ::selection {
+  color: #fff;
+  background: #db2777;
+}
+
+.post time {
+  --flow-space: 1rem;
+  display: block;
+}
+
+.post :is(h2, h3) {
+  --flow-space: 4.5rem;
+}
+
+.post :is(h2, h3) + * {
+  --flow-space: 1rem;
+}
+
+.post figure,
+.post figure + * {
+  --flow-space: 4.5rem;
+}
+
+.post p code,
+.post li code {
+  @apply bg-pink-100;
+  @apply px-2;
+  @apply py-1;
+  @apply rounded;
+  @apply text-base;
+}
+
+.post ul {
+  @apply list-disc;
+  @apply list-inside;
+  @apply mx-8;
+}
+
+.post ul li {
+  @apply mb-2;
+}
