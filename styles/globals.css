@@ -127,10 +127,16 @@ svg {
   @apply text-base;
 }
 
-.post ul {
-  @apply list-disc;
+.post ul,
+.post ol {
   @apply list-inside;
   @apply mx-8;
+}
+.post ul {
+  @apply list-disc;
+}
+.post ol {
+  @apply list-decimal;
 }
 
 .post ul li {

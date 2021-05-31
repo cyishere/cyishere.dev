@@ -10,7 +10,11 @@ const PostLayout = ({ meta, children }) => {
   }, []);
 
   return (
-    <Layout seoTitle={meta.title} seoDescription={meta.description}>
+    <Layout
+      seoTitle={meta.title}
+      seoDescription={meta.description}
+      slug={meta.slug}
+    >
       <div className="w-full px-6 mx-auto md:w-4/5 md:px-0 lg:w-1/2">
         <header className="mb-20 text-center">
           <h1 className="text-5xl">{meta.title}</h1>

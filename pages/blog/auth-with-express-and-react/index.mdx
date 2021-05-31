@@ -1,11 +1,13 @@
 import PostLayout from "@/components/PostLayout";
 import Figure from "@/components/Figure";
 import { ExternalLink } from "@/components/Link";
+import Video from "@/components/Video";
 
 export const meta = {
   title: "Auth with Express and React",
   description: "What's authentication? What's authorization?",
   createdAt: "2021-05-27",
+  slug: "blog/auth-with-express-and-react",
 };
 
 export default ({ children }) => (
@@ -285,16 +287,19 @@ Thus, this is the logic of authorization. For more clear I add two behaviors in 
 
 - `./client/src/components/Members.js` makes the HTTP request to get all the members (`getUsers`);
 - The backend API is in the `./server/routes/user.js` file.
-
 - `makeAPlan` request is in the `./client/src/components/Profile.js` component;
 - The backend API is in the `./server/routes/plan.js` file.
 
 These two behaviors in action:
 
-[Authentication%20with%20Express%20&%20React%20App%208955e98b983143f3addcd02949800d1e/lou.mov](Authentication%20with%20Express%20&%20React%20App%208955e98b983143f3addcd02949800d1e/lou.mov)
+<Video
+  src="https://res.cloudinary.com/cyishere/video/upload/v1622445673/cyishere/blog/unauthorized_r1gibh.mp4"
+  poster="/img/blog/auth-with-express-and-react/unauthorized.png"
+  description="When request is unauthorized."
+/>
 
-When request is unauthorized.
-
-[Authentication%20with%20Express%20&%20React%20App%208955e98b983143f3addcd02949800d1e/debbie.mov](Authentication%20with%20Express%20&%20React%20App%208955e98b983143f3addcd02949800d1e/debbie.mov)
-
-When request is authorized.
+<Video
+  src="https://res.cloudinary.com/cyishere/video/upload/v1622445672/cyishere/blog/authorized_kzcmc2.mp4"
+  poster="/img/blog/auth-with-express-and-react/authorized.png"
+  description="When request is authorized."
+/>
