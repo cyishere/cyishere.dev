@@ -1,6 +1,6 @@
 import { TextLink } from "./Link";
 
-const Header = ({ pathname }) => {
+const Header = ({ pageSection }) => {
   return (
     <header className="mb-20">
       <div className="lg:container mx-auto py-4 flex flex-row justify-between items-center">
@@ -14,7 +14,7 @@ const Header = ({ pathname }) => {
             <li>
               <TextLink
                 href="/"
-                classes={pathname === "" ? "active" : ""}
+                classes={pageSection === "" ? "active" : ""}
                 noBg={true}
               >
                 home
@@ -23,7 +23,7 @@ const Header = ({ pathname }) => {
             <li>
               <TextLink
                 href="/portfolio"
-                classes={pathname === "portfolio" ? "active" : ""}
+                classes={pageSection === "portfolio" ? "active" : ""}
                 noBg={true}
               >
                 portfolio
@@ -32,7 +32,7 @@ const Header = ({ pathname }) => {
             <li>
               <TextLink
                 href="/blog"
-                classes={pathname === "blog" ? "active" : ""}
+                classes={pageSection === "blog" ? "active" : ""}
                 noBg={true}
               >
                 blog
@@ -41,7 +41,7 @@ const Header = ({ pathname }) => {
             <li>
               <TextLink
                 href="/about"
-                classes={pathname === "about" ? "active" : ""}
+                classes={pageSection === "about" ? "active" : ""}
                 noBg={true}
               >
                 about

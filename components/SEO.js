@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-const SEO = ({ title, description, slug }) => {
+const SEO = ({ title, description, pathname }) => {
   const domainUrl = "https://cyishere.dev";
 
   const content = description
     ? description
     : "Thoughts on JavaScript, React, CSS, GraphQL and Prisma.";
-  const canonical = slug ? `${domainUrl}/${slug}` : domainUrl;
+  const canonical = pathname ? `${domainUrl}${pathname}` : domainUrl;
 
   return (
     <Head>

@@ -4,14 +4,15 @@ import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ seoTitle, seoDescription, slug, children }) => {
-  const pathname = useRouter().pathname.slice(1);
+const Layout = ({ seoTitle, seoDescription, children }) => {
+  const pathname = useRouter().pathname;
+  const pageSection = useRouter().pathname.split("/")[1];
 
   return (
     <>
-      <SEO title={seoTitle} description={seoDescription} slug={slug} />
+      <SEO title={seoTitle} description={seoDescription} pathname={pathname} />
 
-      <Header pathname={pathname} />
+      <Header pageSection={pageSection} />
       {children}
       <Footer />
     </>
