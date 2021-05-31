@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ExternalLinkSolid } from "./Icon";
 
 export const TextLink = ({ href, children, classes, noBg }) => {
   const defaultStyle = noBg ? "highlight-link" : "link";
@@ -32,7 +33,7 @@ export const ExternalLink = ({ href, children, noBg, classes }) => {
       rel="noreferrer"
       className={`${defaultStyle} px-1 ${extraStyles}`}
     >
-      {children}
+      {children} <ExternalLinkSolid />
     </a>
   );
 };

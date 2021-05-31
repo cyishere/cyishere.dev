@@ -2,7 +2,7 @@ import { TextLink } from "./Link";
 
 const Header = ({ pageSection }) => {
   return (
-    <header className="mb-20">
+    <header className="mb-20 px-8 mx-auto lg:px-0 lg:w-2/3">
       <div className="lg:container mx-auto py-4 flex flex-row justify-between items-center">
         <h1 className="logo text-5xl font-black">
           <TextLink href="/" classes="text-yellow-500">

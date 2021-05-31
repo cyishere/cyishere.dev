@@ -70,6 +70,11 @@ svg {
   background: #db2777;
 }
 
+/* FOOTER */
+.footer .icons svg.inline {
+  display: none;
+}
+
 /**
  * Post Styles
  */
@@ -77,26 +82,32 @@ svg {
   margin-top: 1em;
 }
 
-.post {
+.post,
+.portfolio {
   @apply leading-7;
 }
-.post h2 {
+.post h2,
+.portfolio h2 {
   @apply text-4xl;
   @apply font-extrabold;
 }
-.post h3 {
+.post h3,
+.portfolio h3 {
   @apply text-3xl;
   @apply font-bold;
 }
-.post h4 {
+.post h4,
+.portfolio h4 {
   @apply text-2xl;
   @apply font-semibold;
 }
-.post h5 {
+.post h5,
+.portfolio h5 {
   @apply text-2xl;
   @apply font-medium;
 }
-.post h6 {
+.post h6,
+.portfolio h6 {
   @apply text-xl;
   @apply font-medium;
 }
@@ -119,7 +130,9 @@ svg {
 }
 
 .post p code,
-.post li code {
+.post li code,
+.portfolio p code,
+.portfolio li code {
   @apply bg-pink-100;
   @apply px-2;
   @apply py-1;
@@ -128,18 +141,23 @@ svg {
 }
 
 .post ul,
-.post ol {
+.post ol,
+.portfolio ul,
+.portfolio ol {
   @apply list-inside;
   @apply mx-8;
 }
-.post ul {
+.post ul,
+.portfolio ul {
   @apply list-disc;
 }
-.post ol {
+.post ol,
+.portfolio ol {
   @apply list-decimal;
 }
 
-.post ul li {
+.post ul li,
+.portfolio ul li {
   @apply mb-2;
 }
 
@@ -148,11 +166,17 @@ svg {
   @apply block;
 }
 
-.post :is(h2, h3) {
+.post :is(h2, h3),
+.portfolio :is(h2) {
   @apply mt-16;
 }
 
-.post :is(h2, h3) + * {
+.portfolio :is(h3) {
+  @apply mt-8;
+}
+
+.post :is(h2, h3) + *,
+.portfolio :is(h2, h3) + * {
   @apply mt-4;
 }
 
