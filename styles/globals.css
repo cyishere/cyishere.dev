@@ -65,34 +65,40 @@ svg {
   @apply ml-2;
 }
 
+::selection {
+  color: #fff;
+  background: #db2777;
+}
+
 /**
  * Post Styles
  */
-
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+  margin-top: 1em;
 }
 
 .post {
-  --flow-space: 2.25rem;
-  line-height: 1.5;
+  @apply leading-7;
 }
-
-.post h1,
 .post h2 {
-  @apply font-black;
-}
-
-.post h1 {
   @apply text-4xl;
+  @apply font-extrabold;
 }
-
-.post h2 {
-  @apply text-3xl;
-}
-
 .post h3 {
+  @apply text-3xl;
+  @apply font-bold;
+}
+.post h4 {
   @apply text-2xl;
+  @apply font-semibold;
+}
+.post h5 {
+  @apply text-2xl;
+  @apply font-medium;
+}
+.post h6 {
+  @apply text-xl;
+  @apply font-medium;
 }
 
 .post img {
@@ -100,39 +106,16 @@ svg {
 }
 
 .post figcaption {
-  font-size: var(--size-300);
-
-  font-style: italic;
-  margin-top: 1rem;
+  @apply text-base;
+  @apply italic;
+  @apply mt-4;
 }
 
 .post blockquote {
-  padding-left: var(--size-600);
-  border-left: 5px solid;
-  font-style: italic;
-}
-
-.post ::selection {
-  color: #fff;
-  background: #db2777;
-}
-
-.post time {
-  --flow-space: 1rem;
-  display: block;
-}
-
-.post :is(h2, h3) {
-  --flow-space: 4.5rem;
-}
-
-.post :is(h2, h3) + * {
-  --flow-space: 1rem;
-}
-
-.post figure,
-.post figure + * {
-  --flow-space: 4.5rem;
+  @apply font-mono;
+  @apply pl-7;
+  @apply border-l-4;
+  @apply border-solid;
 }
 
 .post p code,
@@ -152,4 +135,24 @@ svg {
 
 .post ul li {
   @apply mb-2;
+}
+
+.post time {
+  @apply mt-4;
+  @apply block;
+}
+
+.post :is(h2, h3) {
+  @apply mt-16;
+}
+
+.post :is(h2, h3) + * {
+  @apply mt-4;
+}
+
+.post figure,
+.post figure + *,
+.post pre,
+.post pre + * {
+  @apply mt-16;
 }
