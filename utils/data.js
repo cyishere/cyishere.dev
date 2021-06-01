@@ -20,6 +20,12 @@ export const chatApp = {
   },
 };
 
+export const fcc = {
+  title: "FreeCodeCamp Certifications",
+  description: `I got 4 certifications on freeCodeCamp.org about frontend and backend, all of JavaScript ecosystem. More details below.`,
+  cover: "/img/portfolio/fcc/freecodecamp-certifications-cover.jpg",
+};
+
 export const projects = [
   {
     id: "1",
@@ -55,5 +61,112 @@ export const projects = [
     href: "https://github.com/cyishere/find-a-movie",
     description: "Exercise about React with API & localStorage.",
     imageUrl: "/img/portfolio/find-a-movie/find-a-movie-screenshot.png",
+  },
+];
+
+export const fccProjects = [
+  {
+    id: 1,
+    category: "Responsive Web Design",
+    imageUrl: "/img/portfolio/fcc/responsive-web-design.png",
+    projects: [
+      {
+        name: "A Tribute Page",
+        url: "https://codepen.io/cyishere/full/YzyQQmN",
+      },
+      {
+        name: "A Survey Form",
+        url: "https://codepen.io/cyishere/full/oNjweQo",
+      },
+      {
+        name: "A Product Landing Page",
+        url: "https://codepen.io/cyishere/full/GRpvoWO",
+      },
+      {
+        name: "A Technical Documentation Page",
+        url: "https://codepen.io/cyishere/full/JjYybdy",
+      },
+      {
+        name: "A Personal Portfolio Webpage",
+        url: "https://codepen.io/cyishere/full/LYpzyGy",
+      },
+    ],
+  },
+  {
+    id: 2,
+    category: "JavaScript Algorithms and Data Structures",
+    imageUrl:
+      "/img/portfolio/fcc/javascript-algorithms-and-data-structures.png",
+    projects: [
+      {
+        name: "Palindrome Checker",
+      },
+      {
+        name: "Roman Numeral Converter",
+      },
+      {
+        name: "Caesars Cipher",
+      },
+      {
+        name: "Telephone Number Validator",
+      },
+      {
+        name: "Cash Register",
+      },
+    ],
+  },
+  {
+    id: 3,
+    category: "Front End Libraries",
+    imageUrl: "/img/portfolio/fcc/front-end-libraries.png",
+    projects: [
+      {
+        name: "A Random Quote Machine",
+        url: "https://codepen.io/cyishere/full/dyYVwWY",
+      },
+      {
+        name: "A Markdown Previewer",
+        url: "https://codepen.io/cyishere/full/KKdXJKE",
+      },
+      {
+        name: "A Drum Machine",
+        url: "https://codepen.io/cyishere/full/jObxZEy",
+      },
+      {
+        name: "A JavaScript Calculator",
+        url: "https://codepen.io/cyishere/full/bGVMZyO",
+      },
+      {
+        name: "A 25 + 5 Clock",
+        url: "https://codepen.io/cyishere/full/BajRvoa",
+      },
+    ],
+  },
+  {
+    id: 4,
+    category: "APIs and Microservices",
+    imageUrl: "/img/portfolio/fcc/apis-and-microservices.png",
+    projects: [
+      {
+        name: "Timestamp Microservice",
+        url: "https://glitch.com/edit/#!/cy-fcc-timestamps",
+      },
+      {
+        name: "Request Header Parser Microservice",
+        url: "https://glitch.com/edit/#!/cy-fcc-request-header",
+      },
+      {
+        name: "URL Shortener Microservice",
+        url: "https://glitch.com/edit/#!/cy-fcc-url-shortener",
+      },
+      {
+        name: "Exercise Tracker",
+        url: "https://glitch.com/edit/#!/cy-fcc-tracker",
+      },
+      {
+        name: "File Metadata Microservice",
+        url: "https://glitch.com/edit/#!/cy-fcc-fileuploader",
+      },
+    ],
   },
 ];
