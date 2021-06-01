@@ -1,7 +1,19 @@
+import Link from "next/link";
 import Layout from "./Layout";
 import { ExternalLink } from "./Link";
+import { ArrowNarrowRight } from "./Icon";
 
-const PortfolioLayout = ({ meta, children }) => {
+import { projects } from "@/utils/data";
+import Emoji from "./Emoji";
+
+const PortfolioLayout = ({ meta, children, otherProjectName }) => {
+  let otherProject = null;
+  if (otherProjectName) {
+    otherProject = projects.find(
+      (project) => project.name === otherProjectName
+    );
+  }
+
   return (
     <Layout seoTitle={meta.title} seoDescription={meta.description}>
       <main className="mb-20 w-full">
@@ -44,10 +56,33 @@ const PortfolioLayout = ({ meta, children }) => {
               </div>
             </div>
           </section>
-
-          {children}
         </div>
+
+        {children}
       </main>
+
+      {/* Other Project */}
+      {otherProject ? (
+        <section className="mb-20 px-8 lg:px-0">
+          <h2 className="mb-6 text-3xl text-center">
+            <Emoji name="sparkles">✨</Emoji> Other Project{" "}
+            <Emoji name="sparkles">✨</Emoji>
+          </h2>
+          <Link href={otherProject.href}>
+            <a className="block bg-gray-100 rounded-md p-8 mx-auto lg:w-4/5 xl:w-2/3 hover:bg-yellow-50">
+              <h2 className="post-title text-3xl inline">
+                {otherProject.name}
+                <span className="text-green-400">
+                  <ArrowNarrowRight />
+                </span>
+              </h2>
+              <p className="mt-4 text-base text-gray-500">
+                {otherProject.description}
+              </p>
+            </a>
+          </Link>
+        </section>
+      ) : null}
     </Layout>
   );
 };
