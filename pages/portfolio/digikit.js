@@ -5,6 +5,7 @@ const digikit = () => {
   const meta = {
     title: "digiKIT",
     description: `"digiKIT" is an e-commerce app to demonstrate how to put "full-stack" development together. It contains the basic CRUD for products, shopping cart, and making orders, except actual purchase.`,
+    cover: "/img/portfolio/digikit/digikit-cover_l.jpg",
     techStack: {
       backend: ["Node.js/Express.js", "MongoDB"],
       frontend: ["React.js", "Redux", "styled-components", "Storybook"],
