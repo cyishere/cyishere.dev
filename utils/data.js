@@ -1,29 +1,13 @@
-export const posts = [
-  {
-    id: "1",
-    title: "Say hello to CSS Container Queries",
-    createdAt: "13 Apr, 2021",
-    slug: "say-hello-to-css-container-queries",
+export const digikit = {
+  title: "digiKIT",
+  description: `"digiKIT" is an e-commerce app to demonstrate how to put "full-stack" development together. It contains the basic CRUD for products, shopping cart, and making orders, except actual purchase.`,
+  cover: "/img/portfolio/digikit/digikit-cover_l.jpg",
+  techStack: {
+    backend: ["Node.js/Express.js", "MongoDB"],
+    frontend: ["React.js", "Redux", "styled-components", "Storybook"],
+    github: "https://github.com/cyishere/digikit",
   },
-  {
-    id: "2",
-    title: "Responspect Element As A Way To Increase Your Curiosity",
-    createdAt: "13 Apr, 2021",
-    slug: "responspect-element-as-a-way-to-increase-your-curiosity",
-  },
-  {
-    id: "3",
-    title: "Handling Text Over Images in CSS",
-    createdAt: "13 Apr, 2021",
-    slug: "handling-text-over-images-in-css",
-  },
-  {
-    id: "4",
-    title: "Digging Into CSS Logical Properties",
-    createdAt: "13 Apr, 2021",
-    slug: "digging-into-css-logical-properties",
-  },
-];
+};
 
 export const projects = [
   {

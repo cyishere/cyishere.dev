@@ -1,20 +1,12 @@
 import PortfolioLayout from "@/components/PortfolioLayout";
 import { ExternalLink, TextLink } from "@/components/Link";
+import { digikit as meta } from "@/utils/data";
 
 const digikit = () => {
-  const meta = {
-    title: "digiKIT",
-    description: `"digiKIT" is an e-commerce app to demonstrate how to put "full-stack" development together. It contains the basic CRUD for products, shopping cart, and making orders, except actual purchase.`,
-    cover: "/img/portfolio/digikit/digikit-cover_l.jpg",
-    techStack: {
-      backend: ["Node.js/Express.js", "MongoDB"],
-      frontend: ["React.js", "Redux", "styled-components", "Storybook"],
-      github: "https://github.com/cyishere/digikit",
-    },
-  };
   return (
     <PortfolioLayout meta={meta}>
       <article className="portfolio">
+        [The introduction video]
         <h2>Project Purpose and Goal</h2>
         <p>
           I started to learn React.js and the whole concept of full-stack
@@ -29,7 +21,6 @@ const digikit = () => {
           years ago with PHP developers in China, there was no such thing back
           then.)
         </p>
-
         <h2>Web Stack and Explanation</h2>
         <p>
           When I was working as a screenplay writer, my main entertainment was
@@ -52,7 +43,6 @@ const digikit = () => {
           more clearly.
         </p>
         <p>And the storybook is a very helpful tool to make UI components.</p>
-
         <h2>Problem and Thought Process</h2>
         <p>
           I thought it'd be smoothly making this app since I've learned tons of
@@ -60,7 +50,6 @@ const digikit = () => {
           and stucked once in a while. Here are the main problems that bothered
           me.
         </p>
-
         <h3>The Error Handling</h3>
         <p>
           As a self-taught developer, I took the advice online that people
@@ -78,7 +67,6 @@ const digikit = () => {
           </TextLink>
           .
         </p>
-
         <h3>The Logic of Auth</h3>
         <p className="mb-4">
           By making this app I found out there are two parts about "auth", one
@@ -88,9 +76,7 @@ const digikit = () => {
           </TextLink>{" "}
           about the whole logic of them.
         </p>
-
         <h3>The Logic of Shopping Cart with Redux</h3>
-
         <h3>The Protection of Routes</h3>
       </article>
     </PortfolioLayout>
