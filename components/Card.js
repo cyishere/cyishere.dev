@@ -21,7 +21,7 @@ const Card = ({ project }) => {
           noBg={true}
           classes="flex flex-row justify-center items-center bg-yellow-400 text-white hover:bg-white hover:text-black"
         >
-          read more <ExternalLinkSolid />
+          read more
         </ExternalLink>
       </p>
     </article>
