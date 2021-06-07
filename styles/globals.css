@@ -75,6 +75,11 @@ svg {
   display: none;
 }
 
+/* VIDEO */
+.video-wrapper {
+  height: auto !important;
+}
+
 /**
  * Post Styles
  */

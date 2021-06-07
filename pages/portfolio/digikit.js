@@ -2,6 +2,7 @@ import PortfolioLayout from "@/components/PortfolioLayout";
 import { ExternalLink, TextLink } from "@/components/Link";
 import Video from "@/components/Video";
 import { digikit as meta } from "@/utils/data";
+import Figure from "@/components/Figure";
 
 const digikit = () => {
   return (
@@ -9,9 +10,9 @@ const digikit = () => {
       <article className="w-full">
         <div className="portfolio flow px-8 mx-auto lg:w-4/5 lg:px-0 xl:w-2/3">
           <Video
-            src="https://res.cloudinary.com/cyishere/video/upload/v1622445673/cyishere/blog/unauthorized_r1gibh.mp4"
-            poster="/img/blog/auth-with-express-and-react/unauthorized.png"
-            description="Demo walk through"
+            src="https://res.cloudinary.com/cyishere/video/upload/v1623059549/cyishere/portfolio/digikit-demo-wark-through_wgbadk.mp4"
+            poster="/img/portfolio/digikit/video-cover.jpeg"
+            description="digiKIT demo walk-through"
           />
           <h2>Project Purpose and Goal</h2>
           <p>
@@ -22,7 +23,7 @@ const digikit = () => {
           </p>
           <p>
             It contains the CRUD methods through the REST API. With the front
-            end, I could fully practically understand the "state management"
+            end, I could fully practicality understand the "state management"
             concept which is quite new to me. (I used to work as a frontend
             developer 10 years ago with PHP developers in China, there was no
             such thing back then.)
@@ -61,27 +62,27 @@ const digikit = () => {
                 Figma.)
               </p>
             </div>
-            <img
-              src="/img/portfolio/digikit/placeholder-2.jpg"
-              alt="digiKIT screenshot 2"
-              className="place-self-center"
+            <Figure
+              src="/img/portfolio/digikit/screenshot-1.jpeg"
+              alt="Home page & product list page"
+              styles="place-self-center"
             />
           </div>
         </div>
 
         {/* Screenshots Group */}
         <div className="grid grid-cols-1 mt-6 lg:grid-cols-3">
-          <img
-            src="/img/portfolio/digikit/placeholder-3.jpg"
-            alt="digiKIT screenshot 3"
+          <Figure
+            src="/img/portfolio/digikit/screenshot-2.jpeg"
+            alt="Product page & shopping cart"
           />
-          <img
-            src="/img/portfolio/digikit/placeholder-4.jpg"
-            alt="digiKIT screenshot 4"
+          <Figure
+            src="/img/portfolio/digikit/screenshot-3.jpeg"
+            alt="Admin panel has a different template"
           />
-          <img
-            src="/img/portfolio/digikit/placeholder-5.jpg"
-            alt="digiKIT screenshot 5"
+          <Figure
+            src="/img/portfolio/digikit/screenshot-4.jpeg"
+            alt="Designed in Figma"
           />
         </div>
 
@@ -120,7 +121,34 @@ const digikit = () => {
             about the whole logic of them.
           </p>
           <h3>The Logic of Shopping Cart with Redux</h3>
+          <p>
+            Shopping cart on a website/webapp is like a "temporary zone", we put
+            some products in there but this data will never store in the
+            database. We read and write and do some calculations in this
+            temporary zone to achieve the functionality of a shopping cart. So
+            state management could make a temporary zone happen.
+          </p>
           <h3>The Protection of Routes</h3>
+          <p>
+            Generally speaking for some special routes, like the user's profile
+            page, we need to check whether there's a logged-in user when there
+            is one we display the page, if not we redirect to a login page. So
+            the logic is simple, but how do we implement this logic with React?
+          </p>
+          <p>
+            With the help of{" "}
+            <ExternalLink href="https://reactrouter.com/">
+              react-router-dom
+            </ExternalLink>
+            , I check the user's status in a <code>Route</code> component for
+            whether there's a login status in the app's state and use the{" "}
+            <code>if-else</code> condition to show the right component or
+            re-direct to another location.{" "}
+            <ExternalLink href="https://github.com/cyishere/digikit/blob/main/frontend/src/app/ProtectedRoutes.js">
+              Here's the code
+            </ExternalLink>{" "}
+            for route protection.
+          </p>
         </div>
       </article>
     </PortfolioLayout>
