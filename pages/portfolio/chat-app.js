@@ -1,5 +1,6 @@
 import { ExternalLink, TextLink } from "@/components/Link";
 import PortfolioLayout from "@/components/PortfolioLayout";
+import Figure from "@/components/Figure";
 
 import { chatApp as meta } from "@/utils/data";
 
@@ -7,11 +8,11 @@ const ChatApp = () => {
   return (
     <PortfolioLayout meta={meta} otherProjectName="digiKIT">
       <article className="w-full">
-        <img
-          src="/img/portfolio/chat-app/placeholder-1.jpg"
-          alt="Chat App screenshot 1"
-        />
         <div className="portfolio flow px-8 mx-auto lg:w-4/5 lg:px-0 xl:w-2/3">
+          <Figure
+            src="/img/portfolio/chat-app/screenshots.gif"
+            alt="Screencast: conversation in real-time"
+          />
           <h2>Project Purpose and Goal</h2>
           <p>
             I started to learn React.js and the whole concept of full-stack
